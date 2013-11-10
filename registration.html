@@ -1,0 +1,174 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="" />
+  <meta name="copyright" content="" />
+  <link rel="stylesheet" href="css/foundation.css">
+  <!-- http://eternicode.github.io/bootstrap-datepicker/?markup=input&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&todayBtn=false&language=en&orientation=auto&keyboardNavigation=on&forceParse=on#sandbox -->
+  <link rel="stylesheet" href="css/datepicker.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+  <body>
+
+<form id="applicant-form" method="POST" action="validation_applicant.php">
+  <fieldset>
+    <legend>Applicant - Please complete the following information</legend>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Owner Name</label>
+          <input type="text" id="name" name="name"/>
+        </div>
+      </div>
+    <div class="row">
+      <div class="large-8 columns ">
+        <label>Onwer Address</label>
+        <input type="text" id="address" name="address">
+      </div>
+      <div class="large-4 columns">
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="Input only numbers without - (dash)" name="phone">
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 columns">
+        <label>Pet Type</label>
+        <div class="switch">
+          <input id="pettype" name="switch-pettype" type="radio" checked value="dog" >
+          <label for="pettype" onclick="">Dog</label>
+          <input id="pettype1" name="switch-pettype" type="radio" value="cat">
+          <label for="pettype1" onclick="">Cat</label>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="large-4 columns">
+        <label>Pet Name</label>
+        <input type="text" id="petname" name="petname">
+      </div>
+      <div class="large-4 columns">
+        <label>Color</label>
+        <input type="text" id="petcolor" name="petcolor">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Breed</label>
+        <div class="switch">
+          <input id="breed" name="switch-breed" type="radio" checked value="no">
+          <label for="breed" onclick="">No</label>
+          <input id="breed1" name="switch-breed" type="radio" value="yes">
+          <label for="breed1" onclick="">Yes</label>
+          <span></span>
+        </div>
+
+      </div>
+      <div class="large-6 columns">
+        <label>Pet Age</label>
+        <input type="number" min="0" step="1" value="0" pattern="\d+"/ id="petage" name="petage">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Date of last rabies vaccination</label>
+        <input type="text" id="rabies" name="rabies">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Gender</label>
+        <div class="switch">
+          <input id="gender" name="switch-gender" type="radio" checked value="male">
+          <label for="gender" onclick="">Male</label>
+          <input id="gender1" name="switch-gender" type="radio" value="female">
+          <label for="gender1" onclick="">Female</label>
+          <span></span>
+        </div>
+
+      </div>
+      <div class="large-6 columns">
+        <label>Neutered or Fertile</label>
+        <div class="switch">
+          <input id="neutered" name="switch-nf" type="radio" checked value="neutered">
+          <label for="neutered" onclick="">Neutered</label>
+          <input id="fertile" name="switch-nf" type="radio" value="fertile">
+          <label for="fertile" onclick="">Fertile</label>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row catsonly" style="display:none;">
+      <div class="large-12 columns">
+        <label>Cats Only - date of last feline leukemia vaccination</label>
+        <input type="text" id="catsonly"  name="catsonly"value="None">
+      </div>
+    </div>
+  <div class="row">
+    <div class="large-12 columns">
+    <input type="submit" class="small button expand"/>
+    </div>
+  </div>
+
+  </fieldset>
+</form>
+
+
+
+
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation-datepicker.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <!--
+
+  <script src="js/foundation/foundation.js"></script>
+
+  <script src="js/foundation/foundation.alerts.js"></script>
+
+  <script src="js/foundation/foundation.clearing.js"></script>
+
+  <script src="js/foundation/foundation.cookie.js"></script>
+
+  <script src="js/foundation/foundation.dropdown.js"></script>
+
+  <script src="js/foundation/foundation.forms.js"></script>
+
+  <script src="js/foundation/foundation.joyride.js"></script>
+
+  <script src="js/foundation/foundation.magellan.js"></script>
+
+  <script src="js/foundation/foundation.orbit.js"></script>
+
+  <script src="js/foundation/foundation.reveal.js"></script>
+
+  <script src="js/foundation/foundation.section.js"></script>
+
+  <script src="js/foundation/foundation.tooltips.js"></script>
+
+  <script src="js/foundation/foundation.topbar.js"></script>
+
+  <script src="js/foundation/foundation.interchange.js"></script>
+
+  <script src="js/foundation/foundation.placeholder.js"></script>
+
+  <script src="js/foundation/foundation.abide.js"></script>
+
+  -->
+
+  <script>
+    $(document).foundation();
+  </script>
+<script src="js/registration.js"></script>
+
+  </body>
+</html>

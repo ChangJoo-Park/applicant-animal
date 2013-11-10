@@ -13,9 +13,14 @@ $(function(){
 
 // Error Check Start
 // Click Button call fnCheck
-$('#applicant-form input[type=button]').click(function(){
+
+$('#applicant-form input[type=submit]').click(function(){
   validation = $.fnCheck();
-  console.log(validation);
+  if(validation){
+    return true;
+  }else{
+    return false;
+  }
 
 });
 
