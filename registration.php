@@ -71,7 +71,7 @@
     <div class="row">
       <div class="large-12 columns">
         <label>Date of last rabies vaccination</label>
-        <input type="text"></textarea>
+        <input type="text" id="rabies">
       </div>
     </div>
 
@@ -102,7 +102,7 @@
     <div class="row catsonly" style="display:none;">
       <div class="large-12 columns">
         <label>Cats Only - date of last feline leukemia vaccination</label>
-        <input type="text">
+        <input type="text" id="catsonly" value="None">
       </div>
     </div>
   <div class="row">
@@ -116,61 +116,7 @@
 
 
 
-<script>
-  $(function(){
-    // Select Dog to Cat
-    $("#pettype").click(function(){
-      console.log("dog");
-      $(".catsonly  input").val('');
-      $(".catsonly").slideUp();
-    });
-    // Select Cat to Dog
-    $("#pettype1").click(function(){
-      console.log("cat");
-      $(".catsonly").slideDown();
-    });
-  });
 
-  // Click Button call fnCheck
-  $('#applicant-form input[type=button]').click(function(){
-    console.log('start submit');
-    $.fnCheck();
-
-  });
-
-  // All input form check
-  $.fnCheck = function(){
-    console.log('start check');
-    // Input Text should not blank
-    $("#applicant-form input[type='text']").map(function(){
-      console.log('inside check');
-      if( $(this).val().length == 0 ){
-        $.fnAddError($(this));
-      }else{
-        $.fnRemoveError($(this));
-      }
-    });
-
-    // Input phone, Pet's Age sholud only numbers
-    $("#phone, #petage").map(function(){
-      if(!$.isNumeric($(this).val())){
-        $.fnAddError($(this));
-      }else{
-       $.fnRemoveError($(this));
-      }
-    });
-
-  }
-
-
-  // Add error class for not validated input
-  $.fnAddError = function(input){
-    input.addClass('error');
-  }
-  $.fnRemoveError = function(input){
-    input.removeClass('error');
-  }
-</script>
 
 
 <?php

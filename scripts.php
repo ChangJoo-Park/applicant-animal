@@ -45,3 +45,4 @@
   <script>
     $(document).foundation();
   </script>
+<script src="js/registration.js"></script>
