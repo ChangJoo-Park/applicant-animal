@@ -61,7 +61,3 @@ $.fnRemoveError = function(input){
 }
 // Error Check End
 
-// Add Date Picker for rabies, catsonly vaccine
-$(function(){
-  $("#rabies, #catsonly").fdatepicker();
-});

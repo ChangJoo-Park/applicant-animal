@@ -1,27 +1,30 @@
 <?php
-echo $_POST['name'];
-echo "\n";
-echo $_POST['address'];
-echo "\n";
-echo $_POST['phone'];
-echo "\n";
-echo $_POST['switch-pettype'];
-echo "\n";
-echo $_POST['petname'];
-echo "\n";
-echo $_POST['petcolor'];
-echo "\n";
-echo $_POST['switch-breed'];
-echo "\n";
-echo $_POST['petage'];
-echo "\n";
-echo $_POST['rabies'];
-echo "\n";
-echo $_POST['switch-gender'];
-echo "\n";
-echo $_POST['switch-nf'];
-echo "\n";
-echo $_POST['catsonly'];
-echo "\n";
+  include "./queries.php";
+?>
+<?php  include "./class_applicant.php"; ?>
+
+<?php
+$applicant = new Applicant(
+    $_POST['name'],
+    $_POST['address'],
+    $_POST['phone'],
+    $_POST['switch-pettype'],
+    $_POST['petname'],
+    $_POST['petcolor'],
+    $_POST['switch-breed'],
+    $_POST['petage'],
+    $_POST['rabies'],
+    $_POST['switch-gender'],
+    $_POST['switch-nf'],
+    $_POST['catsonly']
+  );
+
+#  showDB();
+insertApplicant($applicant);
+?>
+  <script type="text/javascript">
+    alert("Thank you for applicant");
+     window.location="http://127.0.0.2/";
+  </script>
 ?>
 
