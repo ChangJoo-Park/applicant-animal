@@ -59,6 +59,36 @@
 <!-- Completed Applicant -->
 <?php $resultCompelete = getApplicantComplete(); ?>
       <h3><strong><?= count($resultCompelete);?> 건의 </strong>처리 완료된 신청서</h3>
+      <table>
+        <tr>
+          <th>License Number</th>
+          <th>Owner Name</th>
+          <th>Phone</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Country</th>
+          <th>Issue Date</th>
+          <th>Expiration Date</th>
+          <th>Fee Paid</th>
+          <th>Senior</th>
+          <th>Guide Dog</th>
+        </tr>
+<?php foreach ($resultCompelete as $v1 ) { ?>
+      <tr>
+        <td><?= $v1[13]; ?></td>
+        <td><?= $v1[1]; ?></td>
+        <td><?= $v1[3]; ?></td>
+        <td><?= $v1[4]; ?></td>
+        <td><?= $v1[5]; ?></td>
+        <td><?= $v1[14]; ?></td>
+        <td><?= $v1[15]; ?></td>
+        <td><?= $v1[16]; ?></td>
+        <td><?= $v1[17]; ?></td>
+        <td><?= $v1[18]; ?></td>
+        <td><?= $v1[19]; ?></td>
+      </tr>
+<?php  } ?>
+      </table>
       <hr />
 		</div>
 	</div>

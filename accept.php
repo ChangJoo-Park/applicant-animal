@@ -91,13 +91,13 @@ $result = getApplicant_with_id($id);
     </fieldset>
 
 
-    <form id="applicant-form" method="POST" action="acceptance_applicant.php">
+    <form id="applicant-form" method="POST" action="acceptance_office.php">
       <fieldset>
         <legend>For Office use Only</legend>
         <div class="row">
           <div class="large-6 columns">
             <label for="">License Number</label>
-            <input type="text" id="licensenumber" name="licensenumber" disabled value="<?= $v1[0];?>">
+            <input type="text" id="licensenumber" name="licensenumber" readonly  value="<?= $v1[0];?>">
           </div>
           <div class="large-6 columns">
             <label for="">Country</label>
@@ -117,7 +117,7 @@ $result = getApplicant_with_id($id);
         <div class="row">
           <div class="large-6 columns">
             <label for="">Fee Paid</label>
-            <input type="number" id="fee" name="fee" value="5000" disabled>
+            <input type="number" id="fee" name="fee" value="5000" readonly >
           </div>
           <div class="large-3 columns">
             <label>Senior</label>

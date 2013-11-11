@@ -40,6 +40,36 @@ function insertApplicant($obj){
 }
 
 ?>
+
+<?php
+function acceptApplicant($obj){
+
+  try {
+    $user = 'root';
+    $pass = '1q2w3e';
+    $dbh = new PDO('mysql:host=localhost;dbname=animal;charset=utf8',$user,$pass);
+    $dbh -> exec("SET CHARACTER SET utf-8");
+
+    $id = $obj->licensenumber;
+
+    $sql =$dbh->prepare("UPDATE applicant SET licensenumber = :licensenumber, country = :country, issue = :issue, expiration = :expiration, feepaid = :feepaid, senior = :senior, guide = :guide WHERE pid = $id");
+    $sql->bindParam(':licensenumber', $obj->licensenumber);
+    $sql->bindParam(':country'      , $obj->country      );
+    $sql->bindParam(':issue'        , $obj->issue        );
+    $sql->bindParam(':expiration'   , $obj->expiration   );
+    $sql->bindParam(':feepaid'      , $obj->feepaid      );
+    $sql->bindParam(':senior'       , $obj->senior       );
+    $sql->bindParam(':guide'        , $obj->guide        );
+    $sql->execute();
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    $dbh = null;
+  } catch (PDOException $e) {
+      print "Error!: " . $e->getMessage() . "<br/>";
+      die();
+  }
+}
+
+?>
 <?php
 function createDB(){
   # New DB Create
